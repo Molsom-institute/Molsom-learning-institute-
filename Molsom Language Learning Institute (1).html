@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molsom Language Learning Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        molsom: {
+                            50: '#fdf8f6',
+                            100: '#fbeee9',
+                            500: '#d95325',
+                            600: '#b83e16',
+                            700: '#943010',
+                            800: '#73260e',
+                            900: '#5c1f0d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #1a120b;
+            background-image: radial-gradient(rgba(217, 83, 37, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-molsom-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-molsom-500 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="1000428958.png" alt="Molsom Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="block font-bold text-stone-900 text-lg leading-tight group-hover:text-molsom-600 transition-colors">Molsom Institute</span>
+                    <span class="block text-xs text-stone-500 font-medium">Language & Heritage</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-stone-600">
+                <a href="#home" class="hover:text-molsom-600 transition-colors">Home</a>
+                <a href="#courses" class="hover:text-molsom-600 transition-colors">Courses</a>
+                <a href="#vocabulary" class="hover:text-molsom-600 transition-colors">Vocabulary Tool</a>
+                <a href="#community" class="hover:text-molsom-600 transition-colors">Community</a>
+                <a href="#about" class="hover:text-molsom-600 transition-colors">About</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#courses" class="bg-molsom-500 hover:bg-molsom-600 text-white font-semibold px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block px-3 py-2 rounded-lg text-stone-700 hover:bg-molsom-50 hover:text-molsom-600 font-medium">Home</a>
+            <a href="#courses" class="block px-3 py-2 rounded-lg text-stone-700 hover:bg-molsom-50 hover:text-molsom-600 font-medium">Courses</a>
+            <a href="#vocabulary" class="block px-3 py-2 rounded-lg text-stone-700 hover:bg-molsom-50 hover:text-molsom-600 font-medium">Vocabulary Tool</a>
+            <a href="#community" class="block px-3 py-2 rounded-lg text-stone-700 hover:bg-molsom-50 hover:text-molsom-600 font-medium">Community</a>
+            <a href="#about" class="block px-3 py-2 rounded-lg text-stone-700 hover:bg-molsom-50 hover:text-molsom-600 font-medium">About</a>
+            <div class="pt-2">
+                <a href="#courses" class="block text-center bg-molsom-500 text-white font-semibold py-3 rounded-xl shadow">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative hero-pattern text-white overflow-hidden py-20 lg:py-32">
+        <div class="absolute inset-0 opacity-25 bg-gradient-to-r from-black via-transparent to-black pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-molsom-500/20 border border-molsom-500/40 text-molsom-300 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span>Preserving Indigenous Heritage</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Learn & Celebrate the <span class="text-molsom-500 underline decoration-stone-600">Molsom Language</span>
+                    </h1>
+                    <p class="text-stone-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl">
+                        Connect with your roots, engage with traditional community learning models, and master the Molsom language through interactive lessons, folk tales, and native audio guides.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#courses" class="bg-molsom-500 hover:bg-molsom-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg text-center transition-all flex items-center justify-center space-x-3 group">
+                            <span>Explore Courses</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#vocabulary" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl text-center backdrop-blur-sm transition-all">
+                            Try Flashcards
+                        </a>
+                    </div>
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-white/10 text-stone-300">
+                        <div>
+                            <span class="block text-2xl font-bold text-white">4+</span>
+                            <span class="text-xs text-stone-400">Learning Levels</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white">500+</span>
+                            <span class="text-xs text-stone-400">Vocabulary Words</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white">100%</span>
+                            <span class="text-xs text-stone-400">Community Driven</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-molsom-500 to-amber-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-stone-800 bg-stone-900 aspect-[4/3]">
+                            <img src="1000428958.png" alt="Molsom Community Learning" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-molsom-500 text-white text-xs font-semibold px-2.5 py-1 rounded-md uppercase tracking-wider mb-2 inline-block">Traditional Gathering</span>
+                                    <h3 class="font-bold text-lg">Intergenerational Study Circle</h3>
+                                    <p class="text-xs text-stone-300">Learning under the shade of ancestral trees.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-molsom-600 font-bold tracking-widest text-xs uppercase bg-molsom-100 px-3 py-1 rounded-full">Structured Curriculum</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">Featured Courses & Learning Modules</h2>
+                <p class="text-stone-600 text-lg">Designed for all ages and proficiency levels, from absolute beginners to advanced speakers and culture enthusiasts.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-stone-200 group">
+                    <div class="h-48 bg-stone-200 relative overflow-hidden">
+                        <img src="1000428958.png" alt="Beginner Molsom" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Beginner</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                                <span class="flex items-center"><i data-lucide="book-open" class="w-3.5 h-3.5 mr-1"></i> 12 Lessons</span>
+                                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i> 4 Weeks</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-stone-900 mb-2">Molsom 101: Foundations</h3>
+                            <p class="text-stone-600 text-sm">Learn basic greetings, numbers, family terms, and everyday conversational phrases.</p>
+                        </div>
+                        <div>
+                            <div class="w-full bg-stone-100 rounded-full h-2 mb-4">
+                                <div class="bg-emerald-500 h-2 rounded-full w-1/4"></div>
+                            </div>
+                            <button onclick="openEnrollModal('Molsom 101: Foundations')" class="w-full bg-stone-900 hover:bg-molsom-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm shadow">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-stone-200 group">
+                    <div class="h-48 bg-stone-200 relative overflow-hidden">
+                        <img src="1000428958.png" alt="Intermediate Molsom" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Intermediate</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                                <span class="flex items-center"><i data-lucide="book-open" class="w-3.5 h-3.5 mr-1"></i> 18 Lessons</span>
+                                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i> 6 Weeks</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-stone-900 mb-2">Conversational Fluency</h3>
+                            <p class="text-stone-600 text-sm">Expand sentence structures, native idioms, and narrative storytelling skills.</p>
+                        </div>
+                        <div>
+                            <div class="w-full bg-stone-100 rounded-full h-2 mb-4">
+                                <div class="bg-amber-500 h-2 rounded-full w-1/12"></div>
+                            </div>
+                            <button onclick="openEnrollModal('Conversational Fluency')" class="w-full bg-stone-900 hover:bg-molsom-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm shadow">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-stone-200 group">
+                    <div class="h-48 bg-stone-200 relative overflow-hidden">
+                        <img src="1000428958.png" alt="Advanced Molsom" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Advanced</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                                <span class="flex items-center"><i data-lucide="book-open" class="w-3.5 h-3.5 mr-1"></i> 15 Lessons</span>
+                                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i> 5 Weeks</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-stone-900 mb-2">Advanced Literature & Poetry</h3>
+                            <p class="text-stone-600 text-sm">Deep dive into classical phrasing, traditional speeches, and complex linguistic nuances.</p>
+                        </div>
+                        <div>
+                            <div class="w-full bg-stone-100 rounded-full h-2 mb-4">
+                                <div class="bg-rose-500 h-2 rounded-full w-0"></div>
+                            </div>
+                            <button onclick="openEnrollModal('Advanced Literature & Poetry')" class="w-full bg-stone-900 hover:bg-molsom-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm shadow">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-stone-200 group">
+                    <div class="h-48 bg-stone-200 relative overflow-hidden">
+                        <img src="1000428958.png" alt="Culture and Folk Tales" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Cultural Heritage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                                <span class="flex items-center"><i data-lucide="book-open" class="w-3.5 h-3.5 mr-1"></i> 10 Modules</span>
+                                <span class="flex items-center"><i data-lucide="clock" class="w-3.5 h-3.5 mr-1"></i> Self-paced</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-stone-900 mb-2">Folk Tales & Traditions</h3>
+                            <p class="text-stone-600 text-sm">Explore ancestral legends, songs, agricultural festivals, and traditional customs.</p>
+                        </div>
+                        <div>
+                            <div class="w-full bg-stone-100 rounded-full h-2 mb-4">
+                                <div class="bg-purple-500 h-2 rounded-full w-2/5"></div>
+                            </div>
+                            <button onclick="openEnrollModal('Folk Tales & Traditions')" class="w-full bg-stone-900 hover:bg-molsom-600 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm shadow">
+                                Explore Module
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vocabulary" class="py-20 bg-white border-y border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-3">
+                <span class="text-molsom-600 font-bold tracking-widest text-xs uppercase bg-molsom-100 px-3 py-1 rounded-full">Interactive Practice</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">Molsom Vocabulary Flashcards</h2>
+                <p class="text-stone-600">Click the card to reveal translation, tap audio to hear pronunciation, and practice daily.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-stone-900 to-stone-800 rounded-3xl p-8 sm:p-12 shadow-2xl text-white relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-molsom-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex justify-between items-center mb-8 text-stone-400 text-sm font-medium">
+                    <span id="flashcard-counter">Card 1 of 5</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full text-xs text-stone-300">Daily Practice</span>
+                </div>
+
+                <!-- Flashcard Box -->
+                <div id="flashcard" onclick="flipCard()" class="bg-white/10 border border-white/20 rounded-2xl p-8 sm:p-12 text-center cursor-pointer hover:bg-white/15 transition-all transform hover:scale-[1.01] min-h-[240px] flex flex-col justify-center items-center shadow-inner">
+                    <span id="card-category" class="text-xs uppercase tracking-widest text-molsom-400 font-bold mb-3">Greetings & Basics</span>
+                    <h3 id="card-word" class="text-4xl sm:text-5xl font-black text-white mb-4">Intei / Khiba</h3>
+                    <p id="card-translation" class="text-xl sm:text-2xl text-stone-300 font-medium mb-6">Hello / Greetings</p>
+                    <div class="bg-stone-900/60 px-4 py-2 rounded-xl border border-white/10 max-w-md w-full">
+                        <p class="text-xs text-stone-400 italic" id="card-example">Example: "Intei, chibai nangni?" (Hello, how are you?)</p>
+                    </div>
+                    <span class="mt-6 text-xs text-stone-400 flex items-center space-x-1">
+                        <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i>
+                        <span>Click card to toggle details</span>
+                    </span>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex items-center justify-between mt-8">
+                    <button onclick="prevCard()" class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl font-semibold flex items-center space-x-2 transition-all">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        <span>Previous</span>
+                    </button>
+                    
+                    <button onclick="playAudioSim()" class="bg-molsom-500 hover:bg-molsom-600 px-6 py-3 rounded-xl font-semibold flex items-center space-x-2 shadow-lg transition-all animate-pulse">
+                        <i data-lucide="volume-2" class="w-5 h-5"></i>
+                        <span>Listen Pronunciation</span>
+                    </button>
+
+                    <button onclick="nextCard()" class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl font-semibold flex items-center space-x-2 transition-all">
+                        <span>Next</span>
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-molsom-600 font-bold tracking-widest text-xs uppercase bg-molsom-100 px-3 py-1 rounded-full">Community & Stories</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">Voices from the Molsom Community</h2>
+                <p class="text-stone-600 text-lg">Read updates from elders, youth learners, and cultural guardians preserving our rich heritage.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-molsom-100 flex items-center justify-center text-molsom-600 font-bold text-lg">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Ratan Molsom</h4>
+                            <span class="text-xs text-stone-500">Elder & Cultural Advisor</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        "Our language is the repository of our wisdom, our songs, and our history. When we gather under the trees to teach our children, we keep our spirit alive for generations to come."
+                    </p>
+                    <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
+                        <span>October 2026</span>
+                        <span class="text-molsom-600 font-semibold">Oral History Project</span>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-molsom-100 flex items-center justify-center text-molsom-600 font-bold text-lg">
+                            PM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Purnima Molsom</h4>
+                            <span class="text-xs text-stone-500">Youth Language Fellow</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        "Using this digital platform alongside traditional storytelling has made it so easy for students across different villages to connect, practice vocabulary, and share folk stories."
+                    </p>
+                    <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
+                        <span>September 2026</span>
+                        <span class="text-molsom-600 font-semibold">Digital Initiative</span>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-stone-200 space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-full bg-molsom-100 flex items-center justify-center text-molsom-600 font-bold text-lg">
+                            KM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Kiran Molsom</h4>
+                            <span class="text-xs text-stone-500">Curriculum Lead</span>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        "We have documented over 500 indigenous terms with audio pronunciations. Our goal is to ensure every young Molsom speaker has access to high-quality learning resources."
+                    </p>
+                    <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
+                        <span>August 2026</span>
+                        <span class="text-molsom-600 font-semibold">Resource Update</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-molsom-600 font-bold tracking-widest text-xs uppercase bg-molsom-100 px-3 py-1 rounded-full">Our Mission</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">Rooted in Tradition, Embracing the Future</h2>
+                    <p class="text-stone-600 leading-relaxed">
+                        The Molsom Language Learning Institute Platform is dedicated to the documentation, teaching, and revitalization of the Molsom language. Inspired by generational community gatherings—where elders pass down knowledge under the shade of ancestral trees—we blend traditional oral wisdom with modern interactive technology.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-molsom-100 text-molsom-600 flex items-center justify-center font-bold text-sm mt-1">✓</div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Community-Led Documentation</h4>
+                                <p class="text-stone-600 text-sm">Every lesson and audio recording is verified by respected community elders and native speakers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-molsom-100 text-molsom-600 flex items-center justify-center font-bold text-sm mt-1">✓</div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Accessible Anywhere</h4>
+                                <p class="text-stone-600 text-sm">Optimized for mobile phones and computers so learners in every village can connect effortlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-200 aspect-[4/3]">
+                        <img src="1000428958.png" alt="Molsom Institute Heritage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-molsom-500">
+                            <img src="1000428958.png" alt="Logo" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-bold text-white text-lg">Molsom Language Learning Institute</span>
+                    </div>
+                    <p class="text-stone-400 text-sm max-w-md leading-relaxed">
+                        Dedicated to preserving, teaching, and celebrating the rich indigenous heritage, language, and cultural traditions of the Molsom community.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Courses & Modules</a></li>
+                        <li><a href="#vocabulary" class="hover:text-white transition-colors">Vocabulary Tool</a></li>
+                        <li><a href="#community" class="hover:text-white transition-colors">Community Hub</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Mission</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Connect & Support</h4>
+                    <p class="text-xs text-stone-400">Join our mailing list for weekly Molsom folk tales and vocabulary updates.</p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-stone-800 hover:bg-molsom-500 text-white flex items-center justify-center transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-stone-800 hover:bg-molsom-500 text-white flex items-center justify-center transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-stone-800 hover:bg-molsom-500 text-white flex items-center justify-center transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500">
+                <p>&copy; 2026 Molsom Language Learning Institute. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Preserving Indigenous Voices Together</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="enroll-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative space-y-6">
+            <button onclick="closeEnrollModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <div class="w-16 h-16 bg-molsom-100 rounded-full flex items-center justify-center mx-auto text-molsom-600">
+                    <i data-lucide="award" class="w-8 h-8"></i>
+                </div>
+                <h3 id="modal-title" class="text-2xl font-bold text-stone-900">Enroll in Course</h3>
+                <p class="text-stone-600 text-sm">Enter your details to start learning with native speakers and community mentors.</p>
+            </div>
+            <form onsubmit="handleEnrollSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-molsom-500 text-stone-900 text-sm" placeholder="e.g. Molsom Learner">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-molsom-500 text-stone-900 text-sm" placeholder="learner@example.com">
+                </div>
+                <button type="submit" class="w-full bg-molsom-500 hover:bg-molsom-600 text-white font-bold py-3 rounded-xl shadow-lg transition-colors">
+                    Confirm Enrollment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 transform translate-y-32 opacity-0 transition-all duration-300 flex items-center space-x-3 border border-stone-800">
+        <i data-lucide="check-circle" class="w-6 h-6 text-emerald-400"></i>
+        <div>
+            <h5 id="toast-title" class="font-bold text-sm">Success!</h5>
+            <p id="toast-msg" class="text-xs text-stone-300">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Flashcard Data
+        const flashcards = [
+            {
+                category: "Greetings & Basics",
+                word: "Intei / Khiba",
+                translation: "Hello / Greetings",
+                example: "Example: 'Intei, chibai nangni?' (Hello, how are you?)"
+            },
+            {
+                category: "Family & Relations",
+                word: "Upa / Nu / Pa",
+                translation: "Elder / Mother / Father",
+                example: "Example: 'Kan upate chu kan zah tur a ni.' (We must respect our elders.)"
+            },
+            {
+                category: "Nature & Surroundings",
+                word: "Thingkung / Ram",
+                translation: "Tree / Forest or Nature",
+                example: "Example: 'Thingkung hnuaiah kan zir.' (We study under the tree.)"
+            },
+            {
+                category: "Daily Life",
+                word: "Rawhnawi / Chaw",
+                translation: "Food / Rice",
+                example: "Example: 'Chaw kan ei ta.' (We are eating food.)"
+            },
+            {
+                category: "Culture & Heritage",
+                word: "Hnam / Inkhawm",
+                translation: "Community/Nation / Gathering",
+                example: "Example: 'Kan hnam nunzia hi vawnhhim tur a ni.' (Our cultural heritage must be preserved.)"
+            }
+        ];
+
+        let currentCardIndex = 0;
+
+        function updateFlashcard() {
+            const card = flashcards[currentCardIndex];
+            document.getElementById('card-category').innerText = card.category;
+            document.getElementById('card-word').innerText = card.word;
+            document.getElementById('card-translation').innerText = card.translation;
+            document.getElementById('card-example').innerText = card.example;
+            document.getElementById('flashcard-counter').innerText = `Card ${currentCardIndex + 1} of ${flashcards.length}`;
+        }
+
+        function nextCard() {
+            currentCardIndex = (currentCardIndex + 1) % flashcards.length;
+            updateFlashcard();
+        }
+
+        function prevCard() {
+            currentCardIndex = (currentCardIndex - 1 + flashcards.length) % flashcards.length;
+            updateFlashcard();
+        }
+
+        function flipCard() {
+            const cardEl = document.getElementById('flashcard');
+            cardEl.classList.add('scale-95');
+            setTimeout(() => {
+                cardEl.classList.remove('scale-95');
+            }, 150);
+        }
+
+        function playAudioSim() {
+            showToast("Pronunciation Audio", "Playing native audio simulation for: " + flashcards[currentCardIndex].word);
+        }
+
+        // Modal Functions
+        function openEnrollModal(courseName) {
+            document.getElementById('modal-title').innerText = "Enroll in " + courseName;
+            document.getElementById('enroll-modal').classList.remove('hidden');
+        }
+
+        function closeEnrollModal() {
+            document.getElementById('enroll-modal').classList.add('hidden');
+        }
+
+        function handleEnrollSubmit(event) {
+            event.preventDefault();
+            closeEnrollModal();
+            showToast("Enrollment Successful!", "Welcome aboard! Check your email for course access details.");
+        }
+
+        // Toast Notification Function
+        function showToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-msg').innerText = message;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
